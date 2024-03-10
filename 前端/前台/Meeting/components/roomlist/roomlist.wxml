@@ -1,0 +1,41 @@
+<!--components/roomlist/roomlist.wxml-->
+<navigation defaultSetting="{{navigationSetting}}"></navigation>
+<scroll-view scroll-y class="container">
+    <view class="container-head">
+        <!--Tab选项卡-->
+        <scroll-view scroll-x class="scroll_view" scroll-with-animation="true" enable-flex="true"> 
+            <view class="tab"> 
+                <view class="tab_item {{ tabNow === index ? 'select' : '' }}" wx:for="{{ tabList }}" data-id="{{ index }}" wx:key="index" bindtap="selectTab"> {{ item }} 
+                </view> 
+            </view>
+        </scroll-view>
+    </view>
+    <search bind:Searchcontent="getContent" ></search>
+    <!--下方内容显示-->
+    <swiper class="container-swiper" current="{{tabNow}}" bindchange="handleSwiperChange">
+        <swiper-item wx:for="{{list}}" wx:key="index" >
+            <scroll-view class='container-swiper-sc' enable-flex="true">
+                <view class="mendian-list" style="width: 94%; margin-left: 3%;">
+                    <block wx:for="{{ list[tabNow].arr }}" wx:for-item="map">
+                        <navigator class="mendian-info" url="../canteen/detail">
+                            <image class="thumb" src="../../img/大活.png" pb="100"></image>
+                            <div class="mendian-text">
+                                <div class="title">{{map.title}}</div>
+                                <view class="qisong-juli flex-between" style="font-size: small;">
+                                    <image src="../../img/ratingstar.png" mode="aspectFit" style="width: 15px;height: 15px;"></image>
+                                    <text style="margin-left: 5px; color: red; background-color: pink;">{{map.rating}}</text>
+                                    <text style="margin-left: 15px;">月售：{{map.sale}}</text>
+                                    <view>人均消费：{{map.consumption}}元/人</view>
+                                </view>
+                            </div>
+                        </navigator>
+                    </block>
+                </view>
+ 
+            </scroll-view>
+        </swiper-item>
+    </swiper>
+    
+</scroll-view>
+ 
+

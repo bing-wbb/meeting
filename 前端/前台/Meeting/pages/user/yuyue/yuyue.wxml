@@ -1,0 +1,39 @@
+<!--pages/user/yuyue/yuyue.wxml-->
+<view class="menu">
+  <scroll-view class="men_left" scroll-y="true">
+    <view class="{{leftNum==index?'active':''}}" wx:for="{{itemList}}" wx:key="*this" bindtap="leftClickFn" data-index='{{index}}'>
+    <image class="{{leftNum==index?'dog':'dog1'}}" src="https://antique-weichat.oss-cn-beijing.aliyuncs.com/meeting/images/index/dog.png" ></image>
+    {{item.title}}</view>
+  </scroll-view>
+  
+  <scroll-view class="menu_right" scroll-with-animation="true" scroll-y="true" scroll-into-view="{{rightId}}" bindscroll="rightScroll"
+    bindscrolltolower="lower">
+    <view wx:for="{{itemList}}" wx:key="*this" id="{{'right'+item.id}}" class="box">
+        
+      <view class="box_title">{{item.title}}</view>
+      <!-- <roomlist></roomlist> -->
+
+      <view wx:for="{{item.subArr}}" wx:key="*this" wx:for-item="val" class="box_content">
+        <!-- <image src="{{val.image}}"  alt="" /> -->
+        <image src="https://antique-weichat.oss-cn-beijing.aliyuncs.com/meeting/images/index/1.png"  alt="" />
+        <view class="price">
+          <view class="box_content_text">
+            {{val.roomName}}
+          </view>
+          <view class="commodity_price">
+            {{val.collegeName}}系
+          </view>
+          <view class="gotoyuyue"data-nid="{{val.roomId}}"  bindtap="gotoyuyue">
+            <text class="buttonyu">预约</text>
+          </view>
+          <view class="commodity_price">
+            可容纳：{{val.max}}人
+          </view>
+
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+ 

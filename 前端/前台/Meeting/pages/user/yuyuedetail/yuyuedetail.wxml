@@ -1,0 +1,121 @@
+<!--pages/user/yuyuedetail/yuyuedetail.wxml-->
+<scroll-view class="scroll-view_H" scroll-y="true">
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="outLayer">
+    <View class="lineItemFirst">
+      <View class="kindInfo">
+        <View class="ringItem">
+          *
+        </View>
+        <View class="KindItem">
+          预约人:
+        </View>
+      </View>
+
+      <input class="inputItem" name="orderMen" placeholder="请输入预约人"></input>
+    </View>
+    <View class="lineItem">
+      <View class="kindInfo">
+        <View class="ringItem">
+          *
+        </View>
+        <View class="KindItem">
+          会议主题:
+        </View>
+      </View>
+
+      <input class="inputItem"  name="theme" placeholder="请输入会议主题"></input>
+    </View>
+    <!-- <View class="lineItem">
+      <View class="kindInfo">
+        <View class="ringItem">
+          *
+        </View>
+        <View class="KindItem">
+          电话号码:
+        </View>
+      </View>
+
+      <input class="inputItem"  name="phone" placeholder="请输入联系方式"></input>
+    </View> -->
+
+    <View class="lineItem">
+      <View class="kindInfo">
+        <View class="ringItem">
+          *
+        </View>
+        <View class="KindItem">
+          参会成员:
+        </View>
+      </View>
+      <input class="inputItem" name="member" placeholder="请输入参会成员"></input>
+    </View>
+
+    <!-- <View class="lineItem">
+      <View class="kindInfo">
+        <View class="ringItem">
+          *
+        </View>
+        <View class="KindItem">
+          部门:
+        </View>
+      </View>
+      <picker class="picker" name="bumen" bindchange="pickerChange" range="{{arr}}">
+        <view>
+          {{arr[index]}}
+        </view>
+      </picker>
+    </View> -->
+
+    <!-- <View class="lineItem">
+      <View class="kindInfo">
+        <View class="ringItem">
+          *
+        </View>
+        <View class="KindItem">
+          联系人邮箱:
+        </View>
+      </View>
+      <input class="inputItem" name="emil" placeholder="请输入联系人邮箱"></input>
+    </View> -->
+
+    <View class="colItem">
+      <View class="kindInfoQuestion">
+        <View class="ringItem">
+          *
+        </View>
+        <View class="KindItem">
+          会议内容简述:
+        </View>
+      </View>
+      <input class="inputItemBig" name="themeContent" placeholder="请输入会议内容简述"></input>
+    </View>
+
+    <!-- <View class="lineItem">
+      <View class="kindInfo">
+        <View class="ringItem">
+          *
+        </View>
+        <View class="KindItem">
+          选择附件
+        </View>
+      </View>
+      <button class="btnChooseFile" name="url" bindtap="onChooseFile">选择图片</button>
+    </View> -->
+  </view>
+
+  <!-- <View class="fileItem" wx:if="{{hasFile}}">
+      <View class="fileKindInfo">
+        <View class="fileInfo">
+          选择的文件路径:
+        </View>
+        <View class="fileNameItem">
+          {{path}}
+        </View>
+      </View>
+    </View> -->
+    <button class="btnItem" formType="submit" >确认</button>
+</form>
+
+
+</scroll-view>

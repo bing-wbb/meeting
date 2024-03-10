@@ -1,0 +1,89 @@
+/* pages/user/calendar/calendar.wxss */
+.grid-container {
+    /* display: flex; */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 5rpx;
+    margin: 0 9.9%;
+    position: relative;
+    /* background-color: black; */
+    /* top: 60%; */
+    /* bottom: 300rpx; */
+  }
+  
+  .grid-item {
+    width: 25%;
+    padding-bottom: 15%;
+    /* background-color: #faf5f5; */
+    margin: 1% 1%;
+    position: relative;
+    float: left;
+    overflow: hidden;
+    border-radius: 40rpx;
+    border: 1rpx solid #2556d6;
+  }
+  .grid-item1 {
+    width: 25%;
+    padding-bottom: 15%;
+    /* background-color: #faf5f5; */
+    margin: 1% 1%;
+    position: relative;
+    float: left;
+    overflow: hidden;
+    border-radius: 40rpx;
+    border: 1rpx solid #a3a3a3;
+  }
+  /* 未选中的背景样式 */
+checkbox .wx-checkbox-input{
+    /* width: 25%;  */
+    position:absolute;
+    margin-bottom:auto;
+    /* background-color: rgb(2, 103, 192); */
+    border-radius: 50%;
+    border-color: rgb(255, 255, 255);
+  }
+  
+  /* 选中后的背景样式 */
+  checkbox .wx-checkbox-input.wx-checkbox-input-checked,.checked{
+    background-color: #2556d6;
+    /* border-color: #2556d6; */
+  }
+  
+  /* 选中后的勾子样式 */
+  checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+    width: 40rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    border-radius: 50%;
+    text-align: center;
+    font-size:32rpx; 
+    color: #ffffff; 
+    background: transparent;
+    transform:translate(-50%, -50%) scale(1);
+    -webkit-transform:translate(-50%, -50%) scale(1);
+  }
+  
+  .text {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+    font-size: 25rpx;
+    color: #333;
+  }
+  .chickall{
+      /* background-color: rgb(221, 136, 24); */
+      position: absolute;
+      width: 25%;
+      margin: 35% 0% 0 70%;
+  }
+.floor{
+    position: relative;
+    /* bottom: 0; */
+    height: 80rpx;
+    width: 60%;
+    margin-left: 20%;
+    /* background-color: bisque; */
+}
+  

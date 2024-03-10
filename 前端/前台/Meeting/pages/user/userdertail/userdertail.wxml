@@ -1,0 +1,60 @@
+<view class='animal_info'>
+	<view class="userinfo" style="background-image: url('{{userDetailList.header}}');">
+    <open-data class="userinfo-avatar" type="userAvatarUrl"></open-data>
+	</view>
+<form bindsubmit="formSubmit" report-submit="true">
+<!--姓名-->  
+<view class="section">
+  <view class="section-title">姓名：</view>
+  <view>
+    <input type="text" name="name" value="{{userDetailList.name}}" placeholder="请输入姓名"/>
+  </view>
+</view>
+<!--性别--> 
+<view class="section">
+  <view class="section-title">性别：</view>
+  <!-- <picker name="sex"  value="{{index}}" range="{{arraySex}}"  
+    bindchange="bindPickerChange"  >
+            <view class="picker" >
+            {{arraySex[index]}} 
+            </view>
+        </picker> -->
+  <view>
+    <radio-group name="sex">
+    <label>{{userDetailList.sex=='0'?'男':'女'}}</label>
+      <!-- <label><radio value='0' checked="{{userDetailList.sex=='0'?'checked':''}}"/>男</label>
+      <label><radio value='1' checked="{{userDetailList.sex=='1'?'checked':''}}"/>女</label> -->
+    </radio-group>
+  </view>
+</view>
+<!--学号--> 
+<view class="section">
+  <view class="section-title">学号：</view>
+  <view>
+    <input type="text" name="number" value="{{userDetailList.number}}" placeholder="请输入学号"/>
+  </view>
+</view>
+
+<!--电话号码--> 
+<view class="section">
+  <view class="section-title">手机号：</view>
+  <view>
+    <input type="text" name="phone" value="{{userDetailList.phone}}" placeholder="请输入手机号"/>
+  </view>
+</view>
+<!--学院--> 
+<view class="section">
+  <view class="section-title">学院：</view>
+    <picker name="collegeId"  value="{{index}}" range="{{array}}"  
+    bindchange="bindPickerChange"  >
+            <view class="picker" >
+            {{array[index]}} 
+            </view>
+        </picker>
+
+</view>
+<!-- <button form-type="submit" class="save" style="width: 90%;margin-left:5%;" >保存</button> -->
+<button form-type="submit" class="save" style="width: 90%;margin-left:5%;" >去修改</button>
+<button class="updatePassword" bindtap="gotoUPdatePassword" style="width: 90%;margin-left:5%;" >修改密码</button>
+</form>
+</view>

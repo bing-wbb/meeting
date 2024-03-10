@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.meetingspringboot.dao.AppointmentMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.meetingspringboot.po.AppointmentEntity">
+        <id column="appointment_id" property="appointmentId" />
+        <result column="appointment_room_id" property="appointmentRoomId" />
+        <result column="appointment_date" property="appointmentDate" />
+        <result column="appointment_period_ids" property="appointmentPeriodIds" />
+        <result column="bz" property="bz" />
+        <result column="appointment_period_time_proid" property="appointmentPeriodTimeProid" />
+
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        appointment_id, appointment_room_id, appointment_date, appointment_period_ids, bz,appointment_period_time_proid
+    </sql>
+    <select id="selectAppointment" resultType="com.example.meetingspringboot.po.vo.AppointmentVo">
+        SELECT * from appointment JOIN room on appointment.appointment_room_id=room.room_id
+                                  JOIN college ON room.room_college_id=college.college_id
+                                  JOIN building ON room.room_building_id=building.building_id
+            ${ew.customSqlSegment}
+    </select>
+    <select id="selectRoomkong" resultType="com.example.meetingspringboot.po.AppointmentEntity">
+        SELECT * from appointment
+                          ${ew.customSqlSegment}
+    </select>
+
+</mapper>

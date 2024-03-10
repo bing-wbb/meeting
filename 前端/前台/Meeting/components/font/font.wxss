@@ -1,0 +1,35 @@
+@font-face {
+    font-family: "Alibaba-PuHuiTi-Bold";  /* 这里的字体名称是自定义的 */
+    src: url("https://bokework.oss-cn-beijing.aliyuncs.com/ttf/ttf/Alibaba-PuHuiTi-Bold.ttf"); /* 服务器上ttf文件的路径，记得配置域名权限 */
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Alibaba-PuHuiTi-Heavy";
+    src: url("https://bokework.oss-cn-beijing.aliyuncs.com/ttf/ttf/Alibaba-PuHuiTi-Heavy.ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Alibaba-PuHuiTi-Light";
+    src: url("https://bokework.oss-cn-beijing.aliyuncs.com/ttf/ttf/Alibaba-PuHuiTi-Light.ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Alibaba-PuHuiTi-Medium";
+    src: url("https://bokework.oss-cn-beijing.aliyuncs.com/ttf/ttf/Alibaba-PuHuiTi-Medium.ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Alibaba-PuHuiTi-Regular";
+    src: url("https://bokework.oss-cn-beijing.aliyuncs.com/ttf/ttf/Alibaba-PuHuiTi-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }

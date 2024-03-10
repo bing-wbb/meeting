@@ -1,0 +1,58 @@
+<!--components/calendar/calendar.wxml-->
+<wxs module="func">
+  module.exports = {
+    // *星号替换
+    //将时间转为时间戳，在页面中判断时间戳小于昨天时间戳的呈灰色
+    getTime: function (value) {
+      if (value) return getDate(value).getTime()
+      else return getDate().getTime() - 86400000
+    }
+  }
+</wxs>
+
+<view class="calendar">
+  <view class="title flex">
+    <view class="flex">
+      <!-- <picker value="{{selectDay.year+'-'+selectDay.month}}" bindchange="editMonth" mode="date" fields="month" class="year-month">{{selectDay.year}}.{{selectDay.month>9?selectDay.month:"0"+selectDay.month}}</picker> -->
+      <view class="icon" bindtap="lastMonth" style="transform:rotate(180deg);{{selectDay.month == newMonth ? 'color:#B3B3B3;':''}}">
+        <view class="iconfont icon-playfill"></view>
+      </view>
+      <view class="year-month">{{selectDay.year}}年, {{selectDay.month>9?selectDay.month:"0"+selectDay.month}}月</view>
+      <view class="icon" bindtap="nextMonth" style="{{selectDay.month > newMonth + 1 ? 'color:#B3B3B3;':''}}">
+        <view class="iconfont icon-playfill"></view>
+      </view>
+    </view>
+    <!-- <view catchtap="openChange" class="flex open">
+      <view>{{open?"收起":"展开"}}</view>
+      <view style="margin-left:6rpx;font-size:20rpx" class="iconfont icon-{{open?'fold':'unfold'}}"></view>
+    </view> -->
+  </view>
+
+  <!-- 日历头部 -->
+  <view class="flex-around calendar-week">
+    <view class="view">日</view>
+    <view class="view">一</view>
+    <view class="view">二</view>
+    <view class="view">三</view>
+    <view class="view">四</view>
+    <view class="view">五</view>
+    <view class="view">六</view>
+  </view>
+
+  <!-- 日历主体 -->
+  <view class="flex-start flex-wrap calendar-main" style="height:{{dateList.length/7*112}}rpx">
+    <view wx:for="{{dateList}}" wx:key="dateList" class="day">
+      <view class="bg {{(item.year === selectDay.year && item.month === selectDay.month) ? (item.day === selectDay.day?'select':''): 'other-month'}}" catchtap="selectChange" data-day="{{item.day}}" data-year="{{item.year}}" data-month="{{item.month}}" data-date-string="{{item.dateString}}" data-appointment="{{item.appointment}}" wx:if="{{func.getTime(item.dateString) > func.getTime()}}">
+        <view wx:if="{{(!item.spot && !item.appointment) || (item.year === selectDay.year && item.month === selectDay.month && item.day === selectDay.day)}}">{{item.day}}</view>
+        <view wx:elif="{{item.spot}}" class="reducibleBox">
+          <view class="reducibleDay">{{item.day}}</view>
+          <view class="reducibleText">可约</view>
+        </view>
+        <view wx:elif="{{item.appointment}}" class="appointmentBox">约满</view>
+      </view>
+      <view wx:else class="bg other-month">{{item.day}}</view>
+      <!-- <view class="spot" wx:if="{{item.spot}}"></view> -->
+    </view>
+  </view>
+</view>
+

@@ -1,0 +1,20 @@
+<!--pages/user/ndetail/ndetail.wxml-->
+<wxs src="../../../wxs/util.wxs" module="s"/>
+<view>
+  <view class='animal_info'>
+    <view class='animal_photo'>
+    <view class='animal_title'>
+        <text>{{subject}}</text>
+    </view>
+    <view class='animal_createtime'>
+        <text >{{releaseDate}}</text>
+     </view>
+    <view class='animal_nikename'>
+        <text class="content_text" >{{s.format(content)}}</text>
+     </view>
+ 
+    
+
+    </view>
+  </view>
+</view>

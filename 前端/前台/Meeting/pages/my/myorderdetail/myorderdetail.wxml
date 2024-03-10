@@ -1,0 +1,102 @@
+<!--pages/my/myorderdetail/myorderdetail.wxml-->
+<view>
+  <view class='animal_info'>
+    <view class='animal_photo'>
+    <view class='animal_title'>
+        <text>订单</text>
+    </view>
+    <view class='animal_createtime'>
+        <!-- <text >{{detailList.appointmentDate}}</text> -->
+        <image class="animal_createtime_image" src="{{detailList.bz}}"> </image>
+     </view>
+     <view class='animal_createtime'>
+        <text >{{detailList.appointmentDate}}</text>
+     </view>
+    <view class='animal_nikename'>
+        <text >{{content}}</text>
+     </view>
+ 
+    
+
+    </view>
+  </view>
+
+  <view class="order">
+  <text>订单详情</text>
+  </view>
+  <view class='animal_info'>
+    <view class='order_detail'>
+        <view class="order_detail_title">
+            <text>订单号</text>
+        </view>
+        <view class="order_detail_conten">
+            <text>{{detailList.orderId}}</text>
+        </view>
+    </view>
+    <view class="line"></view>
+    <view class='order_detail'>
+        <view class="order_detail_title">
+            <text>预约时间</text>
+        </view>
+        <view class="order_detail_conten">
+            <text>{{detailList.appointmentDate}}</text>
+        </view>
+    </view>
+    <view class="line"></view>
+    <view class='order_detail'>
+        <view class="order_detail_title">
+            <text>预约时间</text>
+        </view>
+        <view class="order_detail_conten">
+            <text>{{detailList.appointmentDate}}</text>
+        </view>
+    </view>
+    <view class="line"></view>
+    <view class='order_detail'>
+        <view class="order_detail_title">
+            <text>地点</text>
+        </view>
+        <view class="order_detail_conten">
+            <text>{{detailList.roomName}}</text>
+        </view>
+    </view>
+    <view class="line"></view>
+    <view class='order_detail'>
+        <view class="order_detail_title">
+            <text>预约人</text>
+        </view>
+        <view class="order_detail_conten">
+            <text>{{detailList.number}}</text>
+        </view>
+    </view>
+    <view class="line"></view>
+    <view class='order_detail'>
+        <view class="order_detail_title">
+            <text>主题</text>
+        </view>
+        <view class="order_detail_conten">
+            <text>{{detailList.theme}}</text>
+        </view>
+    </view>
+    <view class="line"></view>
+    <view class='order_detail'>
+        <view class="order_detail_title">
+            <text>持续时间</text>
+        </view>
+        <view class="order_detail_conten">
+            <text>{{times}}</text>
+        </view>
+    </view>
+    <view class="line"></view>
+    <view class='order_detail'>
+        <view class="order_detail_title">
+            <text>状态</text>
+        </view>
+        <view class="order_detail_conten">
+            <text>{{detailList.approval==0?"审批通过":(detailList.approval==1?"待审批":(detailList.approval==2?"审批失败":" "))
+	}}</text>
+        </view>
+    </view>
+    <view class="line"></view>
+  </view>
+</view>

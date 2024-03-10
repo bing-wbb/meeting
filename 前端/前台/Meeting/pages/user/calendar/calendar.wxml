@@ -1,0 +1,21 @@
+<!--pages/user/calendar/calendar.wxml-->
+<calendar bind:change="dateChange" spot="{{spot}}" appointment="{{appointment}}"></calendar>
+  <scroll-view class="grid-container"bindchange="checkboxChange">
+  <block wx:for="{{timeList}}" wx:key="{{index}}" >
+    <checkbox-group class="{{item.appointmentState==0?'grid-item':'grid-item1'}}" bindchange="{{item.appointmentState==0?'checkboxChange':'grid-item1'}}" data-index="{{item.appointmentTimePeriodId}}">
+    <text class="text" >{{item.period}}</text>
+        <view class="chickall" >
+            <checkbox value="{{item.appointmentTimePeriodId}}" disabled="{{item.appointmentState}}" />
+             <!-- <text >可容纳人</text> -->
+        </view>
+    </checkbox-group>
+  </block>
+
+</scroll-view>
+<view class="floor"> 
+    <button type="primary" bindtap="yuyuedetail" style="background-color: #2556d6;">预约</button>
+  </view>
+
+
+
+

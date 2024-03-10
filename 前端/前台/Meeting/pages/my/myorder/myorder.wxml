@@ -1,0 +1,90 @@
+<!--导航条--> 
+<view class="navbar"> 
+ <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text> 
+</view> 
+ 
+<!--首页--> 
+<view hidden="{{currentTab!==0}}"> 
+ <view class="order" wx:for="{{userAllList}}" >
+      <view class="{{item.orderState==0?'product':'product1'}}" data-nid="{{item.orderId}}"  bindtap="gotodetail">
+        <view class="{{item.orderState==0?'title':'title1'}}">
+          <text class="{{item.orderState==0?'name':'name1'}}">{{item.theme}}</text>
+          <text class="{{item.orderState==0?'price':'price1'}}">{{item.roomName}}</text>
+        </view>
+		<view class="{{item.orderState==0?'riqi':'riqi1'}}">地点：{{item.name}} {{item.floor}}层</view> 
+        <view class="{{item.orderState==0?'riqi':'riqi1'}}">预约日期：{{item.appointmentDate!=null? item.appointmentDate: "暂无填写"}}</view>
+        <view class="{{item.orderState==0?'riqi':'riqi1'}}"> 学院：{{item.collegeName}}</view>
+		<view class="{{item.orderState==0?'riqi':'riqi1'}}"> 审批状态:{{item.approval==0?"审批通过":(item.approval==1?"待审批":(item.approval==2?"审批失败":" "))
+	}}</view>
+         <view class="{{item.orderState==0?'riqi':'riqi1'}}"> 订单状态：{{item.orderState==0?"正常":(item.orderState==1?"订单取消":(item.orderState==2?"超时":" "))}}</view>
+		<view class="{{item.orderState==0?'riqi':'riqi1'}}"> 下单日期：{{item.createTime}}</view>
+      </view>
+      <button class="{{item.orderState==0?'toback':'toback1'}}" style="width: 20%; margin-right: 5%;"  hover-class="hover" data-nid="{{item.orderId}}"  bindtap="gotodelete">取消</button>
+      <view class="line"></view>
+      <!-- <button class='toback1' style="width: 20%; margin-right: 5%;"  hover-class="hover" data-nid="{{item.orderId}}"  bindtap="gotodelete">取消</button> -->
+</view>
+</view> 
+ 
+<!--搜索--> 
+<view hidden="{{currentTab!==1}}"> 
+	<view class="order" wx:for="{{userdaishenpiList}}" >
+        <view class="{{item.orderState==0?'product':'product1'}}" data-nid="{{item.orderId}}"  bindtap="gotodetail">
+        <view class="{{item.orderState==0?'title':'title1'}}">
+          <text class="{{item.orderState==0?'name':'name1'}}">{{item.theme}}</text>
+          <text class="{{item.orderState==0?'price':'price1'}}">{{item.roomName}}</text>
+        </view>
+		<view class="{{item.orderState==0?'riqi':'riqi1'}}">地点：{{item.name}} {{item.floor}}层</view> 
+        <view class="{{item.orderState==0?'riqi':'riqi1'}}">预约日期：{{item.appointmentDate!=null? item.appointmentDate: "暂无填写"}}</view>
+        <view class="{{item.orderState==0?'riqi':'riqi1'}}"> 学院：{{item.collegeName}}</view>
+		<view class="{{item.orderState==0?'riqi':'riqi1'}}"> 审批状态:{{item.approval==0?"审批通过":(item.approval==1?"待审批":(item.approval==2?"审批失败":" "))
+	}}</view>
+         <view class="{{item.orderState==0?'riqi':'riqi1'}}"> 订单状态：{{item.orderState==0?"正常":(item.orderState==1?"订单取消":(item.orderState==2?"超时":" "))}}</view>
+		<view class="{{item.orderState==0?'riqi':'riqi1'}}"> 下单日期：{{item.createTime}}</view>
+      </view>
+      <button class="{{item.orderState==0?'toback':'toback1'}}" style="width: 20%; margin-right: 5%;"  hover-class="hover" data-nid="{{item.orderId}}"  bindtap="gotodelete">取消</button>
+      <!-- <button class='toback1' style="width: 20%; margin-right: 5%;"  hover-class="hover" data-nid="{{item.orderId}}"  bindtap="gotodelete">取消</button> -->
+</view>
+</view> 
+ 
+<!--我--> 
+<view hidden="{{currentTab!==2}}"> 
+	<view class="order" wx:for="{{usershenpichenggongList}}" >
+        <view class="{{item.orderState==0?'product':'product1'}}" data-nid="{{item.orderId}}"  bindtap="gotodetail">
+        <view class="{{item.orderState==0?'title':'title1'}}">
+          <text class="{{item.orderState==0?'name':'name1'}}">{{item.theme}}</text>
+          <text class="{{item.orderState==0?'price':'price1'}}">{{item.roomName}}</text>
+        </view>
+		<view class="{{item.orderState==0?'riqi':'riqi1'}}">地点：{{item.name}} {{item.floor}}层</view> 
+        <view class="{{item.orderState==0?'riqi':'riqi1'}}">预约日期：{{item.appointmentDate!=null? item.appointmentDate: "暂无填写"}}</view>
+        <view class="{{item.orderState==0?'riqi':'riqi1'}}"> 学院：{{item.collegeName}}</view>
+		<view class="{{item.orderState==0?'riqi':'riqi1'}}"> 审批状态:{{item.approval==0?"审批通过":(item.approval==1?"待审批":(item.approval==2?"审批失败":" "))
+	}}</view>
+         <view class="{{item.orderState==0?'riqi':'riqi1'}}"> 订单状态：{{item.orderState==0?"正常":(item.orderState==1?"订单取消":(item.orderState==2?"超时":" "))}}</view>
+		<view class="{{item.orderState==0?'riqi':'riqi1'}}"> 下单日期：{{item.createTime}}</view>
+      </view>
+      <button class="{{item.orderState==0?'toback':'toback1'}}" style="width: 20%; margin-right: 5%;"  hover-class="hover" data-nid="{{item.orderId}}"  bindtap="gotodelete">取消</button>
+      <!-- <button class='toback1' style="width: 20%; margin-right: 5%;"  hover-class="hover" data-nid="{{item.orderId}}"  bindtap="gotodelete">取消</button> -->
+</view>
+</view> 
+<!--我--> 
+<view hidden="{{currentTab!==3}}"> 
+	<view class="order" wx:for="{{usershenpishibaiList}}" >
+        <view class="{{item.orderState==0?'product':'product1'}}" data-nid="{{item.orderId}}"  bindtap="gotodetail">
+        <view class="{{item.orderState==0?'title':'title1'}}">
+          <text class="{{item.orderState==0?'name':'name1'}}">{{item.theme}}</text>
+          <text class="{{item.orderState==0?'price':'price1'}}">{{item.roomName}}</text>
+        </view>
+		<view class="{{item.orderState==0?'riqi':'riqi1'}}">地点：{{item.name}} {{item.floor}}层</view> 
+        <view class="{{item.orderState==0?'riqi':'riqi1'}}">预约日期：{{item.appointmentDate!=null? item.appointmentDate: "暂无填写"}}</view>
+        <view class="{{item.orderState==0?'riqi':'riqi1'}}"> 学院：{{item.collegeName}}</view>
+		<view class="{{item.orderState==0?'riqi':'riqi1'}}"> 审批状态:{{item.approval==0?"审批通过":(item.approval==1?"待审批":(item.approval==2?"审批失败":" "))
+	}}</view>
+         <view class="{{item.orderState==0?'riqi':'riqi1'}}"> 订单状态：{{item.orderState==0?"正常":(item.orderState==1?"订单取消":(item.orderState==2?"超时":" "))}}</view>
+		<view class="{{item.orderState==0?'riqi':'riqi1'}}"> 下单日期：{{item.createTime}}</view>
+       
+      </view>
+      <button class="{{item.orderState==0?'toback':'toback1'}}" style="width: 20%; margin-right: 5%;"  hover-class="hover" data-nid="{{item.orderId}}"  bindtap="gotodelete">取消</button>
+ 
+      <!-- <button class='toback1' style="width: 20%; margin-right: 5%;"  hover-class="hover" data-nid="{{item.orderId}}"  bindtap="gotodelete">取消</button> -->
+</view>
+</view> 

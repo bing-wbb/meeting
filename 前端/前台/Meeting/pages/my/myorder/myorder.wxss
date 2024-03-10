@@ -1,0 +1,193 @@
+/* pages/my/myorder/myorder.wxss */
+page{ 
+    display: flex; 
+    flex-direction: column; 
+	height: 100%; 
+	background-color: rgb(240, 240, 240);
+   } 
+   .navbar{ 
+    flex: none; 
+    display: flex; 
+    background: rgb(255, 255, 255); 
+   } 
+   .navbar .item{ 
+    position: relative; 
+    flex: auto; 
+    text-align: center; 
+    line-height: 80rpx; 
+   } 
+   .navbar .item.active{ 
+    color: #2556d6; 
+   } 
+   .navbar .item.active:after{ 
+    content: ""; 
+    display: block; 
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    height: 4rpx; 
+    background: #2556d6; 
+   } 
+   .order {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+    margin-top: 15rpx;
+    /* margin-bottom: 15rpx; */
+    background: #fff;
+    padding-bottom: 15rpx;
+	border: 1rpx solid #e2e2e2;
+  }
+  
+  .product_type {
+	height: 80rpx;
+	border-bottom: 1rpx solid #f3f3f3;
+  }
+  
+  .product_bottom {
+	height: 80rpx;
+	border-top: 1rpx solid #f3f3f3;
+  }
+  
+  
+  .handle {
+	width: auto;
+	height: 40rpx;
+	margin-right: 20rpx;
+	margin-top: 20rpx;
+	line-height: 40rpx;
+	font-size: 28rpx;
+	float: right;
+	border: 1rpx #515151 solid;
+	border-radius: 8rpx;
+	padding: 0 12rpx;
+  }
+  
+  .product_type image {
+	float: left;
+	width: 40rpx;
+	height: 40rpx;
+	margin-left: 20rpx;
+	margin-top: 20rpx;
+  }
+  
+  .gtype {
+	float: left;
+	width: 120rpx;
+	height: 40rpx;
+	margin-left: 5%;
+	margin-top: 20rpx;
+	line-height: 40rpx;
+	font-size: 28rpx;
+	color: #000;
+  }
+  
+  .type {
+	float: right;
+	width: 180rpx;
+	height: 40rpx;
+	margin-right: 20rpx;
+	margin-top: 20rpx;
+	line-height: 40rpx;
+	font-size: 28rpx;
+	text-align: right;
+  }
+  
+  .product {
+	width: 90%;
+	margin: 0 auto;
+	height: auto;
+    margin-top: 20rpx;
+  }
+  /* 取消bintop跳转 */
+  .product1 {
+	width: 90%;
+	margin: 0 auto;
+	height: auto;
+    margin-top: 20rpx;
+    /* background: #f0f0f0; */
+    color: #f0f0f0;
+    pointer-events: none;
+  }
+  
+  .title {
+	font-size: 26rpx;
+	color: #000;
+	height: 50rpx;
+  }
+  .title1 {
+	font-size: 26rpx;
+	color: #d1d1d1;
+	height: 50rpx;
+  }
+  
+  .name {
+	float: left;
+  }
+  
+  .price {
+	float: right;
+	color: red;
+	font-size: 32rpx;
+  }
+  .price1 {
+	float: right;
+	color: #d1d1d1;
+	font-size: 32rpx;
+  }
+  .riqi {
+	display: block;
+	margin: 10rpx 0;
+	font-size: 24rpx;
+    color: #000;
+  }
+  .riqi1 {
+	display: block;
+	margin: 10rpx 0;
+	font-size: 24rpx;
+    color: #d1d1d1;
+  }
+  
+  .info {
+	display: block;
+	margin-top: 10rpx;
+	font-size: 24rpx;
+	color: #000;
+  }
+  .toback{
+      height: 60rpx; /* 设置按钮高度，这里以40rpx为例 */
+      background-color: rgb(0, 74, 212);
+      position:relative;
+      margin-right: -10%;
+      margin-top: -10%;
+      font-size: 24rpx;
+      text-align: center;
+      color: #d1d1d1;
+      border-radius: 98rpx;
+
+  }
+  .toback1{
+    height: 60rpx; /* 设置按钮高度，这里以40rpx为例 */
+    background-color:#d1d1d1;
+    position:relative;
+    margin-right: -10%;
+    margin-top: -10%;
+    font-size: 24rpx;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 98rpx;
+    /* pointer-events: none; */
+  }
+  /* border-radius: 98rpx;是控制按钮边变圆 */
+
+  /* 按下变颜色 */
+  .hover {
+    background:  rgb(236, 179, 156);
+  }
+  .line{
+      height: 30rpx;
+      width: 100%;
+      background-color: rgb(255, 255, 255);
+  }
+  

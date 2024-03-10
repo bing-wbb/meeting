@@ -1,0 +1,160 @@
+/* pages/user/shouye/shouye.wxss */
+page {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card {
+    overflow: hidden;
+    width: 96%;
+    height: 100vh;
+    /* border-radius: 30px; */
+    /* background: #e0e0e0; */
+    /* box-shadow: 15px 15px 30px #973e3e,
+      -15px -15px 30px #ffffff; */
+  }
+  
+  .doublecard {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .titleView {
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+    font-family: 楷体;
+    /* background-color: aqua; */
+    color: #000270;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    margin: 0 0;
+    width: 50%;
+    height: 30%;
+    
+  }
+  .t1{
+    margin: -20% -20%; 
+    color: #535353;
+    position: absolute;
+    font-size: 30px;
+    /* background: #e40f0f; */
+  }
+  .t2{
+    margin: -5% -20%; 
+    font-size: 25px;
+    font-family:  Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: absolute;
+    /* background: #995656; */
+  }
+  /* 设置swiper组件的宽高 */
+swiper{
+    margin-top: -5%;
+    margin-left: 5%;
+    width: 90%;
+    height: 300rpx;
+    border-radius: 40rpx;
+    /* background-color: aqua; */
+  }
+  /* 设置swiper组件里面图片的宽高 */
+  swiper image{
+    width: 100%;
+    border-radius: 40rpx;
+    height: 300rpx;
+  }
+  .userinfo-item-box {
+    width: 100%;
+    margin-top: -35vh;
+    /* margin-bottom: -50vh; */
+  }
+   
+  .userinfo-item-box .userinfo-item {
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+    height: 190rpx;
+    padding-left: 0;
+    line-height: 40rpx;
+    position: relative;
+    margin-top: 15rpx;
+    margin-left: 6.1%;
+    /* margin: 15rpx 4%; */
+    /* background-color: aqua; */
+    border-radius: 40rpx;
+    border: 1px solid rgb(231, 231, 231);
+  }
+   
+ 
+   
+  .userinfo-item-box .userinfo-item image {
+    width: 50rpx;
+    height: 50rpx;
+    display: block;
+    margin: 0 auto;
+    margin-top: 40rpx;
+    margin-bottom: 12rpx;
+  }
+  .t4{
+    color: rgb(167, 167, 167);
+    font-size: 22rpx;
+  }
+   
+  .userinfo-item-box .userinfo-item text {
+    position: absolute;
+    bottom: 20rpx;
+    width: 100%;
+    left: 0;
+    color: rgb(202, 202, 202);
+    font-size: 22rpx;
+  }
+   
+  .userinfo-item-box .userinfo-item navigator {
+    font-size: 26rpx;
+    color: rgb(168, 168, 168);
+    margin-top: 5rpx;
+  }
+   
+  .userinfo-item-box .userinfo-item button {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+   
+  .userinfo-info {
+    font-size: 26rpx;
+    color: #999;
+    margin-top: 30rpx;
+  }
+   
+  /* notice */
+   
+  .userinfo-notice {
+    display: flex;
+    background-color: #fff;
+    align-items: center;
+    width:100%;
+    height: 80rpx;
+    margin-bottom: 20rpx;
+  }
+   
+  .userinfo-notice image {
+    width: 36rpx;
+    height: 36rpx;
+    padding-left: 30rpx;
+    padding-right: 20rpx;
+  }
+   
+  .userinfo-notice .notice_swiper {
+    height: 80rpx;
+    width: 85%;
+    line-height: 80rpx;
+    font-size: 28rpx;
+    color: #ab2b2b;
+  }
+  

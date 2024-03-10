@@ -1,0 +1,63 @@
+{
+    "pages": [
+        "pages/user/log/log",
+        "pages/user/shouye/shouye",
+        "pages/user/userdertailupdate/userdertailupdate",
+        "pages/user/userdertailupdatepassword/userdertailupdatepassword",
+        "pages/user/userdertail/userdertail",
+        "pages/my/myorder/myorder",
+        "pages/my/myorderdetail/myorderdetail",
+
+ 		"pages/user/user/user",
+	
+      
+        "pages/user/yuyue/yuyue",
+        "pages/user/notice/notice",
+
+        "pages/user/yuyuedetail/yuyuedetail",
+        "pages/user/calendar/calendar",
+        "components/roomlist/roomlist",
+        "components/calendar/calendar",
+        "pages/user/ndetail/ndetail",
+       
+        "pages/user/notify/notify",
+        "pages/user/index/index",
+       
+        "pages/logs/logs"
+       
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#2556d6",
+        "navigationBarTitleText": "会议室预约",
+        "navigationBarTextStyle": "white"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json",
+    "tabBar": {
+        "border-radius": "30rpx",
+        "position": "bottom",
+        "list": [
+            {
+                "pagePath": "pages/user/shouye/shouye",
+                "iconPath": "/images/index/shouye1-2.png",
+                "selectedIconPath": "/images/index/shouye1.png"
+            },
+            {
+                "pagePath": "pages/user/yuyue/yuyue",
+                "iconPath": "/images/index/icon_xinyong_xianxing_jijin-321-2.png",
+                "selectedIconPath": "/images/index/icon_xinyong_xianxing_jijin-321.png"
+            },
+            {
+                "pagePath": "pages/user/notice/notice",
+                "iconPath": "/images/index/gonggao-2.png",
+                "selectedIconPath": "/images/index/gonggao.png"
+            },
+            {
+                "pagePath": "pages/user/user/user",
+                "iconPath": "/images/index/wode-2.png",
+                "selectedIconPath": "/images/index/wode.png"
+            }
+        ]
+    }
+}

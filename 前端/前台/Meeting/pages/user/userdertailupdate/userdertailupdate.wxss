@@ -1,0 +1,65 @@
+/* pages/user/userdertailupdate/userdertailupdate.wxss */
+page{
+    font-size: 32rpx;
+    background-color: #f5f5f5;
+  }
+  .section{
+    padding: 40rpx;
+    border-bottom: 1px solid rgb(233, 233, 233);
+  }
+  .section:last-child{
+    border: none;
+  }
+  .save{
+      background-color: rgb(50, 85, 206);
+      color: white;
+      height: 80rpx;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      margin-top: 50rpx;
+  }
+  .section-title{
+    width: 20%;
+    float: left;
+    color: rgb(189, 189, 189);
+  }
+  label{
+    padding: 0 20rpx;
+  }
+  .animal_info{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    padding-top: 30rpx;
+   
+  }
+  .userinfo {
+    background: #fff;
+    width: 100%;
+    height: 400rpx;
+    text-align: center;
+    background-image: url(https://cdn.it120.cc/apifactory/2018/03/07/fb8857533553034ee28c92bd0dd89b15.jpg);
+    background-size: 100% 115%;
+    position: relative;
+  }
+   
+  .userinfo button {
+    position: absolute;
+    width: 100%;
+    height: 300rpx;
+    top: 0;
+    opacity: 0;
+  }
+   
+  .userinfo-avatar {
+    border-radius: 50%;
+    margin-top: 130rpx;
+    display: inline-block;
+    overflow: hidden;
+    width: 150rpx;
+    height: 150rpx;
+  }
+   

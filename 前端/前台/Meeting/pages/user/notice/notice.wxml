@@ -1,0 +1,30 @@
+<!--pages/user/notice/notice.wxml-->
+<view>
+  <view class='animal_info' wx:for="{{noticeList}}">
+    <view class='animal_photo' data-nid="{{item.noticeId}}"  bindtap="gotodetail">
+    <image src='https://antique-weichat.oss-cn-beijing.aliyuncs.com/meeting/images/index/1.png'></image>
+    <view class='animal_title'>
+        <text>{{item.subject}}</text>
+    </view>
+    <view class='animal_nikename'>
+        <text >{{item.content}}</text>
+     </view>
+     <view class='animal_createtime'>
+        <text >{{item.releaseDate}}</text>
+     </view>
+    
+
+    </view>
+   
+    <!-- <text class='animal_title'>{{item.describe}}</text> -->
+    <!-- <image src='{{item.picture_url}}' class='animal_img'></image> -->
+    <!-- <text class='animal_intro'>{{item.brief_introduction}}</text> -->
+ 
+    <!-- <view class='article_state'>
+    <image src='{{item.star_url}}' class='article_stateimg'></image>
+    <text class='article_statetext'>{{item.star_count}}</text>
+    <image src='{{item.char_url}}' class='article_stateimg'></image>
+    <text class='article_statetext'>{{item.chat_count}}</text>
+    </view> -->
+  </view>
+</view>

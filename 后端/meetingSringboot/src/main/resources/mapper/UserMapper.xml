@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.meetingspringboot.dao.UserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.meetingspringboot.po.UserEntity">
+        <id column="user_id" property="userId" />
+        <result column="name" property="name" />
+        <result column="college_id" property="collegeId" />
+        <result column="password" property="password" />
+        <result column="number" property="number" />
+        <result column="phone" property="phone" />
+        <result column="state" property="state" />
+        <result column="role" property="role" />
+        <result column="header" property="header" />
+        <result column="sex" property="sex" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        user_id, name, college_id, password, number, phone, state, role, header, sex
+    </sql>
+    <select id="selectUser" resultType="com.example.meetingspringboot.po.vo.UserVo">
+        SELECT * from user JOIN college on user.college_id=college.college_id
+            ${ew.customSqlSegment}
+    </select>
+</mapper>

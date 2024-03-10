@@ -1,0 +1,63 @@
+<!--pages/user/shouye/shouye.wxml-->
+<view class="card">
+  <view class="doublecard {{loginanimation}}" wx:if="{{logincard}}">
+    <view class="titleView">
+      <view class="text-shadow-drop-right">
+        <text class="t1">Hello,</text>
+        <text class="t2">欢迎登陆 {{username}}!</text>
+      </view>
+    </view>
+    <view>
+    <swiper indicator-dots="true" indicator-color="#ffffff" indicator-dots indicator-color="write" indicator-active-color="blue" autoplay="true" interval="2000" circular>
+    <swiper-item>
+    <!-- <image class="image" src="https://antique-weichat.oss-cn-beijing.aliyuncs.com/meeting/images/index/lunbo1.jpg" mode="aspectFill"></image>
+    </swiper-item> -->
+    <image class="image" src="http://p.ananas.chaoxing.com/star3/origin/93d90669f4b6f3d4ab1fc553d9afb248.jpg"></image>
+    </swiper-item> 
+    <swiper-item>
+    <!-- <image class="image" src="https://antique-weichat.oss-cn-beijing.aliyuncs.com/meeting/images/index/lunbo1.jpg" mode="aspectFill"></image> -->
+    <image class="image" src="http://p.ananas.chaoxing.com/star3/origin/93d90669f4b6f3d4ab1fc553d9afb248.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+        <image class="image" src="http://p.ananas.chaoxing.com/star3/origin/93d90669f4b6f3d4ab1fc553d9afb248.jpg"></image>
+    <!-- <image class="image" src="https://antique-weichat.oss-cn-beijing.aliyuncs.com/meeting/images/index/lunbo1.jpg" mode="aspectFill"></image> -->
+    </swiper-item>
+    </swiper>
+
+</view>
+<view class="titleView" style="height: 100rpx;margin-top: 60rpx;">
+      <view class="text-shadow-drop-right">
+        <text class="t2" style="font-size: 20px;">{{geyan}}</text>
+      </view>
+    </view>
+  </view>
+
+<view class="userinfo-item-box" >
+    <navigator hover-class="none" class="userinfo-item" bindtap="getyuyue">
+      <image  src="https://antique-weichat.oss-cn-beijing.aliyuncs.com/meeting/images/index/icon_xinyong_xianxing_jijin-321.png"></image>
+      <view class="t4">会议室预约</view>
+    </navigator>
+    <navigator hover-class="none" class="userinfo-item" bindtap="getgonggao">
+      <image src="https://antique-weichat.oss-cn-beijing.aliyuncs.com/meeting/images/index/gonggao.png"></image>
+			<!-- <text>{{score}}积分</text> -->
+      <view class="t4">公告</view>
+    </navigator>
+    <navigator hover-class="none" class="userinfo-item" bindtap="gettongzhi">
+      <image src="https://antique-weichat.oss-cn-beijing.aliyuncs.com/meeting/images/index/tongzhi.png"></image>
+      <view class="t4">通知</view>
+    </navigator>
+    <navigator hover-class="none" class="userinfo-item" bindtap="getmyyuyue">
+      <image src="https://antique-weichat.oss-cn-beijing.aliyuncs.com/meeting/images/index/wodeyuyue.png"></image>
+      <view class="t4">我的预约</view>
+    </navigator>
+    <!-- <navigator hover-class="none" class="userinfo-item" bindtap="getmyaddress">
+      <image src="/images/index/wodedizhi.png"></image>
+      <view class="t4">我的地址</view>
+    </navigator> -->
+    <view class="userinfo-item">
+      <image src="https://antique-weichat.oss-cn-beijing.aliyuncs.com/meeting/images/index/lianxikefu.png"></image>
+      <view class="t4">联系客服</view>
+      <button open-type="contact" session-from="weapp"></button>
+    </view>
+  </view> 
+</view>

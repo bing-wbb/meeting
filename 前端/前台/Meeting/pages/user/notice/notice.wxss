@@ -1,0 +1,141 @@
+/* pages/user/notice/notice.wxss */
+@import '/components/font/font.wxss';
+
+
+page {
+    background-color: #f5f5f5;
+  }
+.swpr{
+  width: 100%;
+  height: 500rpx;
+}
+ 
+.swpr_it image{
+  width: 100%;
+  /* color:rgb(255, 228, 181); */
+}
+.animal_info{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 200rpx;
+  margin-top: 40rpx;
+  margin-left: 5%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0rpx 0rpx 8rpx 8rpx rgba(61, 71, 161, 0.1);
+  /* border: 1px solid #d3d3d3; */
+  border-radius: 20rpx;
+  /* border-bottom: 1px solid #ededed; */
+  padding-top: 10px;
+  /* background-color: #fff; */
+ 
+}
+.animal_photo{
+  width: 100%;
+  /* background-color: #666; */
+  margin-bottom: 10px;
+   /* margin-left: 6px; */
+}
+.animal_title{
+  margin-left: 240rpx;
+  /* font-weight: bold; */
+  font-family: 'Alibaba-PuHuiTi-Heavy';
+  /* font-weight: bold; */
+  font-size: 36rpx;
+  line-height: 50rpx;
+  overflow: hidden;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+
+  /* text-align: center; */
+  color: rgb(10, 10, 10);
+  vertical-align: middle;
+  margin-bottom: 10px;
+}
+.animal_photo image{
+  position:absolute;
+  width: 220rpx;
+  height: 220rpx;
+  margin-top: -20rpx;
+  border-bottom-left-radius: 20rpx;
+  border-top-left-radius: 20rpx;
+ 
+  /* border-radius: 100rpx; */
+  vertical-align: middle;
+}
+.animal_nikename{
+  margin-top: 10rpx;
+  margin-left: 240rpx;
+  font-size: 28rpx;
+  font-family: 'Alibaba-PuHuiTi-Light';
+  line-height: 40rpx;
+  overflow: hidden;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  color: rgb(126, 126, 126);
+  vertical-align: middle;
+  margin-bottom: 10px;
+}
+.animal_createtime{
+    margin-right: 10rpx;
+    margin-bottom: 10rpx;
+    font-size: 25rpx;
+    font-family: 'Alibaba-PuHuiTi-Medium';
+    line-height: 28rpx;
+    overflow: hidden;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    color: rgb(88, 88, 88);
+    vertical-align: middle;
+    margin-bottom: 10px;
+    text-align: right;
+}
+.animal_img {
+  width: 100%;
+  margin: auto 0;
+ 
+}
+.animal_intro{
+ 
+  font-size: 28rpx;
+  letter-spacing: 2rpx;
+  color: #666;
+  line-height: 40rpx;
+  margin-bottom: 20rpx;
+  margin-left: 20rpx;
+  /* text-align:justify; */
+  
+ 
+}
+.article_state{
+  width: 100%;
+  flex-direction: row;
+  margin-bottom: 20rpx;
+}
+.article_stateimg{
+  width: 26rpx;
+  height: 26rpx;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+.article_statetext{
+  font-size: 26rpx;
+  color: #666;
+  margin-left: 10rpx;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  vertical-align: middle;
+}
+

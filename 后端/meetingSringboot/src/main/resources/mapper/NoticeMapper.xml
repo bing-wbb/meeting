@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.meetingspringboot.dao.NoticeMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.meetingspringboot.po.NoticeEntity">
+        <id column="notice_id" property="noticeId" />
+        <result column="subject" property="subject" />
+        <result column="release_date" property="releaseDate" />
+        <result column="content" property="content" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        notice_id, subject, release_date, content
+    </sql>
+    <select id="selectNotice" resultType="com.example.meetingspringboot.po.NoticeEntity">
+        SELECT * from notice
+    </select>
+</mapper>

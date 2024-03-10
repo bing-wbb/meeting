@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.meetingspringboot.dao.RoomMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.meetingspringboot.po.RoomEntity">
+        <id column="room_id" property="roomId" />
+        <result column="room_name" property="roomName" />
+        <result column="room_detail" property="roomDetail" />
+        <result column="room_building_id" property="roomBuildingId" />
+        <result column="room_college_id" property="roomCollegeId" />
+        <result column="floor" property="floor" />
+        <result column="max" property="max" />
+        <result column="state" property="state" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        room_id, room_name, room_detail, room_building_id, room_college_id, floor, max, state
+    </sql>
+    <select id="selectRoom" resultType="com.example.meetingspringboot.po.vo.RoomVo">
+        SELECT * from room    JOIN college ON room.room_college_id=college.college_id
+                              JOIN building ON room.room_building_id=building.building_id
+            ${ew.customSqlSegment}
+    </select>
+</mapper>

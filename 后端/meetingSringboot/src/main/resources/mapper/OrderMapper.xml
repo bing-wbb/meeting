@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.meetingspringboot.dao.OrderMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.meetingspringboot.po.OrderEntity">
+        <id column="order_id" property="orderId" />
+        <result column="order_user_id" property="orderUserId" />
+        <result column="order_appointment_id" property="orderAppointmentId" />
+        <result column="order_period_ids" property="orderPeriodIds" />
+        <result column="bz" property="bz" />
+        <result column="create_time" property="createTime" />
+        <result column="order_state" property="orderState" />
+        <result column="order_men" property="orderMen" />
+        <result column="member" property="member" />
+        <result column="theme" property="theme" />
+        <result column="approval" property="approval" />
+        <result column="theme_content" property="themeContent" />
+        <result column="member1" property="member1" />
+        <result column="member2" property="member2" />
+        <result column="member3" property="member3" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        order_id, order_user_id, order_appointment_id, order_period_ids, bz, create_time, order_state, order_men, member, theme, approval, theme_content, member1, member2, member3
+    </sql>
+    <select id="selectUserOrder" resultType="com.example.meetingspringboot.po.vo.OrderVo">
+        SELECT * from user_order JOIN appointment on user_order.order_appointment_id=appointment.appointment_id
+                                 JOIN room on appointment.appointment_room_id=room.room_id
+                                 JOIN college ON room.room_college_id=college.college_id
+                                 JOIN building ON room.room_building_id=building.building_id
+                                 JOIN user ON user_order.order_user_id=user.user_id
+            ${ew.customSqlSegment}
+    </select>
+</mapper>

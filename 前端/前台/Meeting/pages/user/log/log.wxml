@@ -1,0 +1,55 @@
+<!--pages/login/login.wxml-->
+<view class="card">
+  <view class="doublecard {{loginanimation}}" wx:if="{{logincard}}">
+    <view class="titleView">
+      <view class="text-shadow-drop-right">
+        <text class="t1">嘿！</text>
+        <text class="t2">赶紧登录</text>
+        <text class="t3">吧！</text>
+         <!-- <text decode="true">嘿！&ensp;&ensp;&ensp;&ensp;赶紧登录吧！</text> -->
+         <!-- <text>赶紧登录吧！</text> -->
+      </view>
+    </view>
+    <view class="inputViews">
+      <view class="inputView">
+        <!-- <label class="labeltext">账号</label> -->
+        <input placeholder="账号" bindinput="getUsername" model:value="{{number}}" type="text"/>
+      </view>
+      <view class="inputView">
+        <!-- <label class="labeltext">密码</label> -->
+        <input placeholder="密码" bindinput="getPassword" model:value="{{password}}" type="password" data="passworedtype"/>
+      </view>
+    </view>
+    <view class="btns">
+      <view class="functionbtn" bindtap="login">
+        <view>登录</view>
+      </view>
+      <view class="switchView">
+        <text class="switchcard" bindtap="switchCard">没有账号？<text style="text-decoration: underline;">点击这里</text></text>
+      </view>
+    </view>
+  </view>
+  <view class="doublecard {{registeranimation}}" wx:if="{{registercard}}">
+    <view class="titleView">
+      <view class="text-shadow-drop-right">Register</view>
+    </view>
+    <view class="inputViews">
+      <view class="inputView">
+        <!-- <label class="labeltext">新账号</label> -->
+        <input placeholder="新账号" bindinput="getNewName" model:value="{{newname}}" />
+      </view>
+      <view class="inputView">
+        <!-- <label class="labeltext">密码</label> -->
+        <input placeholder="密码" bindinput="getNewPassword" model:value="{{newpassword}}" />
+      </view>
+    </view>
+    <view class="btns">
+      <view class="functionbtn" bindtap="register">
+        <view>注册</view>
+      </view>
+      <view class="switchView">
+        <text class="switchcard" bindtap="switchCard">登录<text style="text-decoration: underline;">login</text></text>
+      </view>
+    </view>
+  </view>
+</view>

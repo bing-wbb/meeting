@@ -1,0 +1,151 @@
+/* pages/user/yuyuedetail/yuyuedetail.wxss */
+.outLayer{
+    margin:10rpx;
+    display:flex;
+    width: 90%;
+    margin-left: 5%;
+    flex-direction: column;
+    /* border:1px solid #ececec */
+    background: #ececec;
+    /* border-top: 3rpx solid lightgrey; */
+  }
+  
+  .lineItemFirst{
+    margin-top:25rpx;
+    height: 100rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    /* border-bottom: 1rpx solid lightgrey; */
+  }
+  
+  .lineItem{
+    margin-top:3rpx;
+    height: 100rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    /* border-bottom: 1rpx solid lightgrey; */
+  }
+  
+  .kindInfo{
+    height: 40rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 20rpx;
+  }
+  
+  .fileKindInfo{
+    height: 40rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .ringItem{
+    height: 70rpx;
+    color: red;
+  }
+  
+  .KindItem{
+    height: 70rpx;
+    font-size: smaller;
+  }
+  
+  .kindInfoQuestion{
+    margin-left: 20rpx;
+    margin-top: 15rpx;
+    height: 40rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  
+  .inputItem{
+    /* margin-left: 20rpx; */
+    height: 70rpx;
+    font-size: smaller;
+    width: 70%;
+    text-align: center;
+  }
+  
+  .inputItemBig{
+    margin-left: 20rpx;
+    margin-top: 10rpx;
+    font-size: smaller;
+  }
+  
+  .picker{
+    height: 40rpx;
+    font-size: smaller;
+    width: 70%;
+    text-align: center;
+  }
+  
+  .colItem{
+    margin-top:30rpx;
+    height: 300rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: white;
+    /* border-bottom: 1rpx solid lightgrey; */
+  }
+
+  .scroll-view_H {
+   /*设置display:flex无效*/
+   height: 100vh;
+   background-color: #ececec;
+   padding-bottom: 150rpx;
+  }
+  
+  .selectImg{
+    width: 25rpx;
+    height: 25rpx;
+  }
+  
+  .btnChooseFile{
+    height: 70rpx;
+    width: 30rpx;
+    font-size: x-small;
+  }
+  
+  .btnItem{
+    margin: 30rpx;
+    background-color: #2556d6;
+    color:rgb(255, 255, 255);
+    margin-bottom: 50rpx;
+  }
+  
+  .fileItem{
+    margin-top:3rpx;
+    height: 100rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    /* border-bottom: 1rpx solid lightgrey; */
+  }
+  
+  .fileInfo{
+    height: 40rpx;
+    display: flex;
+    width: 30%;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  
+  .fileNameItem{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 70rpx;
+    font-size: smaller;
+  }
+  

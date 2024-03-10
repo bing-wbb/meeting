@@ -1,0 +1,76 @@
+<!--pages/user/user/user.wxml-->
+ 
+<view class="container">
+	<view class="userinfo">
+    <open-data class="userinfo-avatar" type="userAvatarUrl"></open-data>
+    <view class="iser-info-box">
+      <open-data class="userinfo-nickname" type="userNickName"></open-data>
+      <text wx:if="{{userInfo && score_sign_continuous == 0}}" class="userinfo-score-day" bindtap="score">今日未签到</text>
+      <text wx:if="{{userInfo && score_sign_continuous > 0}}" class="userinfo-score-day" bindtap="score">已连续签到{{score_sign_continuous}}天</text>
+    </view>
+	</view>
+    <!-- 个人信息位置 -->
+  <view class="userinfo-notice" wx:if="{{noticeList}}">
+    <swiper wx:if="{{noticeList}}" class="notice_swiper" vertical="true" autoplay="true" circular="true" interval="6000">
+      <navigator wx:for-items="{{noticeList}}" wx:key="id" url="/pages/user/notice/notice?id={{item.id}}" hover-class="none" open-type="navigate">
+        <swiper-item >
+          <view class="notice_itemr">{{item.title}}</view>
+        </swiper-item>
+      </navigator>
+    </swiper>
+  </view>
+  <view class="userinfo-item" catchtap="toUser">
+    <image style="width: 5%;" src="https://antique-weichat.oss-cn-beijing.aliyuncs.com/meeting/images/my/gerenxinxi.png"></image>
+    <navigator url="pages/user/userdertail/userdertail" hover-class="none">个人信息
+        <text style="position: relative;margin-left: 56%;color: #666;">查看全部</text>
+    <image class="next-image" src="https://antique-weichat.oss-cn-beijing.aliyuncs.com/meeting/images/my/right.png"></image>
+    </navigator>
+  </view> 
+  <view class="userinfo-item" catchtap="toOrder">
+    <text>我的订单</text>
+    <text style="position: relative;margin-left: 52%;color: #666;font-size: 24rpx;">查看全部订单</text>
+    <image class="next-image" src="https://antique-weichat.oss-cn-beijing.aliyuncs.com/meeting/images/my/right.png"></image>
+  </view>
+  <view class="line"></view>
+
+  <view class="user-cart-list">
+    <block wx:for-items="{{orderItems}}"  wx:key="name">
+      <view class="cart-list" catchtap="toOrder" data-type="{{item.name}}" data-typeid="{{item.typeId}}">
+        <image src="{{item.imageurl}}" class="nav-image" />
+        <text>{{item.name}}</text>
+      </view>
+    </block>
+  </view>
+  <!-- <view class="userinfo-item-box">
+    <navigator  hover-class="none" class="userinfo-item" url="/pages/withdraw/withdraw">
+      <image src="../../images/profile_tegral.png"></image>
+      <text>{{balance}}元</text>
+      <view>我的余额</view>
+    </navigator>
+    <navigator hover-class="none" class="userinfo-item" url="/pages/score/score">
+      <image src="../../images/jifen.png"></image>
+			<text>{{score}}积分</text>
+      <view>我的积分</view>
+    </navigator>
+    <navigator hover-class="none" class="userinfo-item" url="/pages/my-coupons/my-coupons">
+      <image src="../../images/profile_ticket.png"></image>
+      <view>我的礼券</view>
+    </navigator>
+    <navigator hover-class="none" class="userinfo-item" url="/pages/fav-list/fav-list">
+      <image src="../../images/profile_collection.png"></image>
+      <view>我的收藏</view>
+    </navigator>
+    <navigator hover-class="none" class="userinfo-item" url="/pages/address/address">
+      <image src="../../images/profile_address.png"></image>
+      <view>我的地址</view>
+    </navigator>
+    <view class="userinfo-item">
+      <image src="../../images/profile_service.png"></image>
+      <view>联系客服</view>
+      <button open-type="contact" session-from="weapp"></button>
+    </view>
+  </view> -->
+  <view class="userinfo-info">
+    {{getInfo}}
+  </view>
+</view>
